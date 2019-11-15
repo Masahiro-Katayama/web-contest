@@ -77,6 +77,13 @@ body {
   margin: 0 auto;
 }
 
+.br-sm {
+  display: none;
+  @include mq($sm) {
+    display: block;
+  }
+}
+
 /* -------------------- */
 /* ----- spNav ----- */
 /* -------------------- */
@@ -614,6 +621,9 @@ body {
 .works {
   position: relative;
   margin-bottom: 100px;
+  @include mq($sm) {
+    margin-bottom: 50px;
+  }
   &:after {
     position: absolute;
     width: 95%;
@@ -625,6 +635,9 @@ body {
     background: $main_color;
     content: "";
     z-index: 10;
+    @include mq($sm) {
+      bottom: -50px;
+    }
   }
 
   &-ttl {
@@ -649,6 +662,9 @@ body {
       @include mq($md) {
         height: 1100px;
       }
+      @include mq($sm) {
+        display: none;
+      }
     }
     &:after {
       position: absolute;
@@ -671,6 +687,11 @@ body {
         width: 17%;
         left: 445px;
       }
+      @include mq($sm) {
+        width: 50%;
+        top: 90px;
+        left: 130px;
+      }
     }
     p {
       margin: 0;
@@ -679,6 +700,9 @@ body {
       font-size: 200px;
       @include mq($lg) {
         font-size: 150px;
+      }
+      @include mq($sm) {
+        font-size: 100px;
       }
       span {
         position: relative;
@@ -689,6 +713,10 @@ body {
         @include mq($lg) {
           top: -73px;
           font-size: 60px;
+        }
+        @include mq($sm) {
+          top: -50px;
+          font-size: 40px;
         }
       }
     }
@@ -733,6 +761,15 @@ body {
           width: 400px;
           left: -40px;
         }
+        @include mq($sm) {
+          width: 95%;
+          left: -30px;
+        }
+      }
+    }
+    .sentence-txt {
+      @include mq($sm) {
+        font-size: 20px;
       }
     }
   }
@@ -745,6 +782,10 @@ body {
       @include mq($md) {
         margin: 50px 0 0 0;
         padding-left: 10.5%;
+      }
+      @include mq($sm) {
+        font-size: 50px;
+        padding-left: 6.5%;
       }
     }
     .houseCarousel-body {
@@ -773,6 +814,10 @@ body {
     @include mq($md) {
       height: 200px;
     }
+    @include mq($sm) {
+      padding: 10px 0 30px;
+      height: 100px;
+    }
   }
   .swiper-slide {
     width: 300px;
@@ -784,6 +829,9 @@ body {
     font-size: 18px;
     @include mq($md) {
       height: 200px;
+    }
+    @include mq($sm) {
+      height: 100px;
     }
   }
   .swiper-slide-house {
@@ -825,6 +873,10 @@ body {
       @include mq($md) {
         padding-left: 10.5%;
       }
+      @include mq($sm) {
+        font-size: 50px;
+        padding-left: 6.5%;
+      }
     }
     .roomCarousel-body {
       background: $base_color;
@@ -863,6 +915,9 @@ body {
 .company {
   position: relative;
   margin-bottom: 100px;
+  @include mq($sm) {
+    margin-bottom: 50px;
+  }
   &:after {
     position: absolute;
     width: 95%;
@@ -874,6 +929,9 @@ body {
     background: $main_color;
     content: "";
     z-index: 10;
+    @include mq($sm) {
+      bottom: -50px;
+    }
   }
 
   &-ttl {
@@ -898,6 +956,9 @@ body {
       @include mq($md) {
         height: 850px;
       }
+      @include mq($sm) {
+        display: none;
+      }
     }
     &:after {
       position: absolute;
@@ -920,6 +981,11 @@ body {
         width: 17%;
         left: 445px;
       }
+      @include mq($sm) {
+        width: 50%;
+        top: 90px;
+        left: 130px;
+      }
     }
     p {
       margin: 0;
@@ -928,6 +994,9 @@ body {
       font-size: 200px;
       @include mq($lg) {
         font-size: 150px;
+      }
+      @include mq($sm) {
+        font-size: 100px;
       }
       span {
         position: relative;
@@ -939,12 +1008,19 @@ body {
           top: -73px;
           font-size: 60px;
         }
+        @include mq($sm) {
+          top: -50px;
+          font-size: 40px;
+        }
       }
     }
   }
 
   .overview-outer {
     margin-bottom: 100px;
+    @include mq($sm) {
+      margin-bottom: 50px;
+    }
     .overview-list {
       width: 900px;
       margin: 0 auto;
@@ -974,6 +1050,10 @@ body {
           @include mq($md) {
             left: 3%;
           }
+          @include mq($sm) {
+            font-size: 18px;
+            left: 3%;
+          }
         }
         &:nth-of-type(2) {
           left: 15%;
@@ -982,6 +1062,10 @@ body {
           }
           @include mq($md) {
             left: 6%;
+          }
+          @include mq($sm) {
+            font-size: 18px;
+            left: 9%;
           }
         }
         &:nth-of-type(3) {
@@ -992,6 +1076,10 @@ body {
           @include mq($md) {
             left: 9%;
           }
+          @include mq($sm) {
+            font-size: 18px;
+            left: 15%;
+          }
         }
         &:nth-of-type(4) {
           left: 35%;
@@ -1001,6 +1089,10 @@ body {
           @include mq($md) {
             left: 12%;
           }
+          @include mq($sm) {
+            font-size: 18px;
+            left: 21%;
+          }
         }
         &:nth-of-type(5) {
           left: 45%;
@@ -1009,6 +1101,10 @@ body {
           }
           @include mq($md) {
             left: 15%;
+          }
+          @include mq($sm) {
+            font-size: 18px;
+            left: 27%;
           }
         }
         &:after {
@@ -1025,6 +1121,9 @@ body {
           }
           @include mq($md) {
             width: 400px;
+          }
+          @include mq($sm) {
+            width: 190px;
           }
         }
       }
@@ -1076,8 +1175,11 @@ body {
         top: 220px;
         left: 8px;
       }
-      @include mq($lg) {
+      @include mq($md) {
         height: 500px;
+      }
+      @include mq($sm) {
+        display: none;
       }
     }
     &:after {
@@ -1101,6 +1203,11 @@ body {
         width: 8%;
         left: 500px;
       }
+      @include mq($sm) {
+        width: 50%;
+        top: 90px;
+        left: 130px;
+      }
     }
     p {
       margin: 0;
@@ -1109,6 +1216,9 @@ body {
       font-size: 200px;
       @include mq($lg) {
         font-size: 150px;
+      }
+      @include mq($sm) {
+        font-size: 100px;
       }
       span {
         position: relative;
@@ -1119,6 +1229,10 @@ body {
         @include mq($lg) {
           top: -73px;
           font-size: 60px;
+        }
+        @include mq($sm) {
+          top: -50px;
+          font-size: 40px;
         }
       }
     }
@@ -1142,7 +1256,10 @@ body {
         padding: 20px;
       }
       @include mq($sm) {
+        width: 80%;
+        padding: 10px;
         box-shadow: 15px 10px 0 black;
+        font-size: 15px;
       }
       &-name,
       &-ruby,
@@ -1151,18 +1268,33 @@ body {
       &-sentence {
         width: 75%;
         position: relative;
+        @include mq($sm) {
+          width: 88%;
+        }
       }
       &-ruby {
         left: 5%;
+        @include mq($sm) {
+          left: 2%;
+        }
       }
       &-email {
         left: 10%;
+        @include mq($sm) {
+          left: 4%;
+        }
       }
       &-email2 {
         left: 15%;
+        @include mq($sm) {
+          left: 6%;
+        }
       }
       &-sentence {
         left: 20%;
+        @include mq($sm) {
+          left: 8%;
+        }
       }
       input,
       textarea {
@@ -1193,6 +1325,9 @@ body {
           margin: 20px 0 0 50px;
           font-size: 30px;
         }
+        @include mq($sm) {
+          margin: 20px 0 30px 30px;
+        }
         &:before {
           position: absolute;
           content: "";
@@ -1214,6 +1349,9 @@ body {
           border-radius: 3px;
           background: $main_color;
           transition: 0.2s;
+          @include mq($sm) {
+            width: 120%;
+          }
         }
         &:hover:before {
           top: 15px;
